@@ -1,0 +1,498 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4C00D9D3193040130052FF86 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C00D9D2193040130052FF86 /* Foundation.framework */; };
+		4C00D9D5193040130052FF86 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C00D9D4193040130052FF86 /* CoreGraphics.framework */; };
+		4C00D9D7193040130052FF86 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C00D9D6193040130052FF86 /* UIKit.framework */; };
+		4C00D9DD193040130052FF86 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4C00D9DB193040130052FF86 /* InfoPlist.strings */; };
+		4C00D9DF193040130052FF86 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C00D9DE193040130052FF86 /* main.m */; };
+		4C00D9E3193040130052FF86 /* ETAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C00D9E2193040130052FF86 /* ETAppDelegate.m */; };
+		4C00D9E6193040130052FF86 /* ETRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C00D9E5193040130052FF86 /* ETRootViewController.m */; };
+		4C00D9E9193040130052FF86 /* ETDataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C00D9E8193040130052FF86 /* ETDataViewController.m */; };
+		4C00D9EC193040130052FF86 /* ETModelController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C00D9EB193040130052FF86 /* ETModelController.m */; };
+		4C00D9EF193040130052FF86 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C00D9ED193040130052FF86 /* Main_iPhone.storyboard */; };
+		4C00D9F2193040130052FF86 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C00D9F0193040130052FF86 /* Main_iPad.storyboard */; };
+		4C00D9F4193040130052FF86 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C00D9F3193040130052FF86 /* Images.xcassets */; };
+		4C00D9FB193040130052FF86 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C00D9FA193040130052FF86 /* XCTest.framework */; };
+		4C00D9FC193040130052FF86 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C00D9D2193040130052FF86 /* Foundation.framework */; };
+		4C00D9FD193040130052FF86 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C00D9D6193040130052FF86 /* UIKit.framework */; };
+		4C00DA05193040130052FF86 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4C00DA03193040130052FF86 /* InfoPlist.strings */; };
+		4C00DA07193040130052FF86 /* JuggerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C00DA06193040130052FF86 /* JuggerTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4C00D9FE193040130052FF86 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4C00D9C7193040130052FF86 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4C00D9CE193040130052FF86;
+			remoteInfo = Jugger;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		4C00D9CF193040130052FF86 /* Jugger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Jugger.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4C00D9D2193040130052FF86 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		4C00D9D4193040130052FF86 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		4C00D9D6193040130052FF86 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		4C00D9DA193040130052FF86 /* Jugger-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Jugger-Info.plist"; sourceTree = "<group>"; };
+		4C00D9DC193040130052FF86 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		4C00D9DE193040130052FF86 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		4C00D9E0193040130052FF86 /* Jugger-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Jugger-Prefix.pch"; sourceTree = "<group>"; };
+		4C00D9E1193040130052FF86 /* ETAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ETAppDelegate.h; sourceTree = "<group>"; };
+		4C00D9E2193040130052FF86 /* ETAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ETAppDelegate.m; sourceTree = "<group>"; };
+		4C00D9E4193040130052FF86 /* ETRootViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ETRootViewController.h; sourceTree = "<group>"; };
+		4C00D9E5193040130052FF86 /* ETRootViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ETRootViewController.m; sourceTree = "<group>"; };
+		4C00D9E7193040130052FF86 /* ETDataViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ETDataViewController.h; sourceTree = "<group>"; };
+		4C00D9E8193040130052FF86 /* ETDataViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ETDataViewController.m; sourceTree = "<group>"; };
+		4C00D9EA193040130052FF86 /* ETModelController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ETModelController.h; sourceTree = "<group>"; };
+		4C00D9EB193040130052FF86 /* ETModelController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ETModelController.m; sourceTree = "<group>"; };
+		4C00D9EE193040130052FF86 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
+		4C00D9F1193040130052FF86 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
+		4C00D9F3193040130052FF86 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		4C00D9F9193040130052FF86 /* JuggerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JuggerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4C00D9FA193040130052FF86 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		4C00DA02193040130052FF86 /* JuggerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "JuggerTests-Info.plist"; sourceTree = "<group>"; };
+		4C00DA04193040130052FF86 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		4C00DA06193040130052FF86 /* JuggerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JuggerTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4C00D9CC193040130052FF86 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4C00D9D5193040130052FF86 /* CoreGraphics.framework in Frameworks */,
+				4C00D9D7193040130052FF86 /* UIKit.framework in Frameworks */,
+				4C00D9D3193040130052FF86 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4C00D9F6193040130052FF86 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4C00D9FB193040130052FF86 /* XCTest.framework in Frameworks */,
+				4C00D9FD193040130052FF86 /* UIKit.framework in Frameworks */,
+				4C00D9FC193040130052FF86 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4C00D9C6193040130052FF86 = {
+			isa = PBXGroup;
+			children = (
+				4C00D9D8193040130052FF86 /* Jugger */,
+				4C00DA00193040130052FF86 /* JuggerTests */,
+				4C00D9D1193040130052FF86 /* Frameworks */,
+				4C00D9D0193040130052FF86 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		4C00D9D0193040130052FF86 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4C00D9CF193040130052FF86 /* Jugger.app */,
+				4C00D9F9193040130052FF86 /* JuggerTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4C00D9D1193040130052FF86 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4C00D9D2193040130052FF86 /* Foundation.framework */,
+				4C00D9D4193040130052FF86 /* CoreGraphics.framework */,
+				4C00D9D6193040130052FF86 /* UIKit.framework */,
+				4C00D9FA193040130052FF86 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4C00D9D8193040130052FF86 /* Jugger */ = {
+			isa = PBXGroup;
+			children = (
+				4C00D9E1193040130052FF86 /* ETAppDelegate.h */,
+				4C00D9E2193040130052FF86 /* ETAppDelegate.m */,
+				4C00D9E4193040130052FF86 /* ETRootViewController.h */,
+				4C00D9E5193040130052FF86 /* ETRootViewController.m */,
+				4C00D9E7193040130052FF86 /* ETDataViewController.h */,
+				4C00D9E8193040130052FF86 /* ETDataViewController.m */,
+				4C00D9EA193040130052FF86 /* ETModelController.h */,
+				4C00D9EB193040130052FF86 /* ETModelController.m */,
+				4C00D9ED193040130052FF86 /* Main_iPhone.storyboard */,
+				4C00D9F0193040130052FF86 /* Main_iPad.storyboard */,
+				4C00D9F3193040130052FF86 /* Images.xcassets */,
+				4C00D9D9193040130052FF86 /* Supporting Files */,
+			);
+			path = Jugger;
+			sourceTree = "<group>";
+		};
+		4C00D9D9193040130052FF86 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				4C00D9DA193040130052FF86 /* Jugger-Info.plist */,
+				4C00D9DB193040130052FF86 /* InfoPlist.strings */,
+				4C00D9DE193040130052FF86 /* main.m */,
+				4C00D9E0193040130052FF86 /* Jugger-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		4C00DA00193040130052FF86 /* JuggerTests */ = {
+			isa = PBXGroup;
+			children = (
+				4C00DA06193040130052FF86 /* JuggerTests.m */,
+				4C00DA01193040130052FF86 /* Supporting Files */,
+			);
+			path = JuggerTests;
+			sourceTree = "<group>";
+		};
+		4C00DA01193040130052FF86 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				4C00DA02193040130052FF86 /* JuggerTests-Info.plist */,
+				4C00DA03193040130052FF86 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4C00D9CE193040130052FF86 /* Jugger */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4C00DA0A193040130052FF86 /* Build configuration list for PBXNativeTarget "Jugger" */;
+			buildPhases = (
+				4C00D9CB193040130052FF86 /* Sources */,
+				4C00D9CC193040130052FF86 /* Frameworks */,
+				4C00D9CD193040130052FF86 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Jugger;
+			productName = Jugger;
+			productReference = 4C00D9CF193040130052FF86 /* Jugger.app */;
+			productType = "com.apple.product-type.application";
+		};
+		4C00D9F8193040130052FF86 /* JuggerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4C00DA0D193040130052FF86 /* Build configuration list for PBXNativeTarget "JuggerTests" */;
+			buildPhases = (
+				4C00D9F5193040130052FF86 /* Sources */,
+				4C00D9F6193040130052FF86 /* Frameworks */,
+				4C00D9F7193040130052FF86 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4C00D9FF193040130052FF86 /* PBXTargetDependency */,
+			);
+			name = JuggerTests;
+			productName = JuggerTests;
+			productReference = 4C00D9F9193040130052FF86 /* JuggerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4C00D9C7193040130052FF86 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = ET;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "Joshua Brown and Barney Mattox";
+				TargetAttributes = {
+					4C00D9F8193040130052FF86 = {
+						TestTargetID = 4C00D9CE193040130052FF86;
+					};
+				};
+			};
+			buildConfigurationList = 4C00D9CA193040130052FF86 /* Build configuration list for PBXProject "Jugger" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 4C00D9C6193040130052FF86;
+			productRefGroup = 4C00D9D0193040130052FF86 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4C00D9CE193040130052FF86 /* Jugger */,
+				4C00D9F8193040130052FF86 /* JuggerTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4C00D9CD193040130052FF86 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4C00D9F2193040130052FF86 /* Main_iPad.storyboard in Resources */,
+				4C00D9F4193040130052FF86 /* Images.xcassets in Resources */,
+				4C00D9EF193040130052FF86 /* Main_iPhone.storyboard in Resources */,
+				4C00D9DD193040130052FF86 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4C00D9F7193040130052FF86 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4C00DA05193040130052FF86 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4C00D9CB193040130052FF86 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4C00D9DF193040130052FF86 /* main.m in Sources */,
+				4C00D9E3193040130052FF86 /* ETAppDelegate.m in Sources */,
+				4C00D9EC193040130052FF86 /* ETModelController.m in Sources */,
+				4C00D9E6193040130052FF86 /* ETRootViewController.m in Sources */,
+				4C00D9E9193040130052FF86 /* ETDataViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4C00D9F5193040130052FF86 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4C00DA07193040130052FF86 /* JuggerTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4C00D9FF193040130052FF86 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4C00D9CE193040130052FF86 /* Jugger */;
+			targetProxy = 4C00D9FE193040130052FF86 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		4C00D9DB193040130052FF86 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4C00D9DC193040130052FF86 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		4C00D9ED193040130052FF86 /* Main_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4C00D9EE193040130052FF86 /* Base */,
+			);
+			name = Main_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		4C00D9F0193040130052FF86 /* Main_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4C00D9F1193040130052FF86 /* Base */,
+			);
+			name = Main_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+		4C00DA03193040130052FF86 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4C00DA04193040130052FF86 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4C00DA08193040130052FF86 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		4C00DA09193040130052FF86 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4C00DA0B193040130052FF86 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Jugger/Jugger-Prefix.pch";
+				INFOPLIST_FILE = "Jugger/Jugger-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		4C00DA0C193040130052FF86 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Jugger/Jugger-Prefix.pch";
+				INFOPLIST_FILE = "Jugger/Jugger-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		4C00DA0E193040130052FF86 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Jugger.app/Jugger";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Jugger/Jugger-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "JuggerTests/JuggerTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		4C00DA0F193040130052FF86 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Jugger.app/Jugger";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Jugger/Jugger-Prefix.pch";
+				INFOPLIST_FILE = "JuggerTests/JuggerTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4C00D9CA193040130052FF86 /* Build configuration list for PBXProject "Jugger" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4C00DA08193040130052FF86 /* Debug */,
+				4C00DA09193040130052FF86 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4C00DA0A193040130052FF86 /* Build configuration list for PBXNativeTarget "Jugger" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4C00DA0B193040130052FF86 /* Debug */,
+				4C00DA0C193040130052FF86 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		4C00DA0D193040130052FF86 /* Build configuration list for PBXNativeTarget "JuggerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4C00DA0E193040130052FF86 /* Debug */,
+				4C00DA0F193040130052FF86 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4C00D9C7193040130052FF86 /* Project object */;
+}
