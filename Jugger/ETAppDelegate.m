@@ -7,13 +7,106 @@
 //
 
 #import "ETAppDelegate.h"
+#import "ETJugger.h"
+#import "ETJuggerTeam.h"
+#import "ETJuggerSettings.h"
+#import "ETPlayViewController.h"
+#import "ETRootViewController.h"
+#import "ETDataViewController.h"
+
+
+#define kLevelFileName @"defaults"
 
 @implementation ETAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+
+    // Initialize defaults file
+    [self copyDefaultsToDocuments];
+    
+    
+    // Load Default Data
+//    NSString *thePath = [[NSBundle mainBundle] pathForResource:kLevelFileName ofType:@"plist"];
+    NSArray* paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    
+    NSLog(@"paths = %@", paths);
+    
+    NSString* thePath = [[self applicationDocumentsDirectory] stringByAppendingPathComponent:@"defaults.plist"];
+    NSDictionary *defaults = [[NSDictionary alloc] initWithContentsOfFile:thePath];
+    // Settings
+    NSDictionary *rawSettings = [defaults valueForKey:@"Settings"];
+    ETJuggerSettings* settings = [[ETJuggerSettings alloc] initWithDictionary:rawSettings];
+    
+    // Playbook
+    NSArray *rawPlaybookArray = [defaults valueForKey:@"Playbook"];
+    
+    // Teams
+    NSArray *rawTeamsArray = [defaults valueForKey:@"Teams"];
+    NSMutableArray* teamsArray = [NSMutableArray array];
+    int index = 0;
+    for (NSDictionary* teamDict in rawTeamsArray){
+        ETJuggerTeam *aTeam = [[ETJuggerTeam alloc] initWithDictionary:teamDict];
+        [teamsArray addObject:aTeam];
+        index++;
+    }
+    
+
+    
+    if ([self.window.rootViewController isKindOfClass:[UITabBarController class]]) {
+        UITabBarController* rootVC = (UITabBarController*)self.window.rootViewController;
+        ETPlayViewController* playVC = (ETPlayViewController*)[[rootVC viewControllers] objectAtIndex:0];
+        playVC.fieldModel = [[settings fields] objectAtIndex:0]; //TODO: Pull last viewed from defaults
+        
+    }
+    
+    
+
+    
+    
     return YES;
+}
+
+- (void)copyDefaultsToDocuments
+{
+    // Setup Sample File
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    NSError *error;
+    
+    NSString *dataPath = [[self applicationDocumentsDirectory] stringByAppendingPathComponent:@"defaults.plist"];
+    NSLog(@"Datapath is %@", dataPath);
+
+    //TODO: Remove for final release
+    // Remove the existing data file to reset to defaults
+//    if ([fileManager fileExistsAtPath:dataPath] == YES)
+//    {
+//        [fileManager removeItemAtPath:dataPath error:&error];
+//    }
+    // If the expected store doesn't exist, copy the default store.
+    if ([fileManager fileExistsAtPath:dataPath] == NO)
+    {
+        NSString *sampleDataPath = [[NSBundle mainBundle] pathForResource:@"defaults" ofType:@"plist"];
+        [fileManager copyItemAtPath:sampleDataPath toPath:dataPath error:&error];
+    }
+    
+}
+
+- (void)addToPlaybook:(ETField*)field
+{
+    
+}
+
+/**
+ Returns the URL to the application's Documents directory.
+ */
+- (NSString *)applicationDocumentsDirectory
+{
+    NSArray *searchPaths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *documentPath = [searchPaths lastObject];
+    
+    //    return [NSURL fileURLWithPath:documentPath];
+    return documentPath;
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application
