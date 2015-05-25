@@ -117,11 +117,15 @@ NSString* const WeaponTemplate = @"%@-%@-%@.png"; // weapon-side-hand
 }
 
 - (void)willMoveToSuperview:(UIView *)newSuperview {
+    if (newSuperview.frame.size.width == 0) return;
+    if (newSuperview.frame.size.height==0) return;
+    
     NSLog(@"newSuperview: %@",NSStringFromCGRect(newSuperview.frame));
     CGPoint center = self.jugger.centerPercent;
     self.frame = CGRectMake(center.x*newSuperview.frame.size.width-(50.0f*(1024.0f/newSuperview.frame.size.width)),
                             center.y*newSuperview.frame.size.height-(50.0f*(550.0f/newSuperview.frame.size.height)),
                             100, 100);
+//    NSAssert((newSuperview.frame.size.width == 1024)||(newSuperview.frame.size.height==550),@"newSuperview wrong size: %@",NSStringFromCGRect(newSuperview.frame));
 }
 
 - (void)setJugger:(ETJugger *)jugger {

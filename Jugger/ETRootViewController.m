@@ -13,7 +13,6 @@
 #import "ETDataViewController.h"
 
 @interface ETRootViewController ()
-@property (readonly, strong, nonatomic) ETModelController *modelController;
 @end
 
 @implementation ETRootViewController

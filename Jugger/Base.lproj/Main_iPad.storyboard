@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13D65" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" initialViewController="jxP-93-qe7">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6205" systemVersion="14A314h" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" initialViewController="jxP-93-qe7">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+        <deployment defaultVersion="1808" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6198"/>
     </dependencies>
     <scenes>
-        <!--Root View Controller - Playbook-->
+        <!--Playbook-->
         <scene sceneID="clB-vc-fyl">
             <objects>
                 <viewController id="703-4V-yAM" customClass="ETRootViewController" sceneMemberID="viewController">
@@ -47,15 +48,15 @@
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                     </imageView>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" id="lJ1-cY-ZbH">
-                                        <rect key="frame" x="20" y="400" width="688" height="527"/>
-                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                        <rect key="frame" x="20" y="613" width="688" height="314"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                     <containerView contentMode="scaleToFill" id="WVh-kz-f18">
                                         <rect key="frame" x="0.0" y="0.0" width="728" height="392"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                         <connections>
                                             <segue destination="KkV-bJ-kZT" kind="embed" identifier="SeguePlayBookToField" id="GCL-vV-HDF"/>
@@ -69,6 +70,7 @@
                     </view>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="containerView" destination="WVh-kz-f18" id="CHu-af-VRr"/>
                         <outlet property="dataLabel" destination="cF2-Le-7mQ" id="3EH-BK-JV6"/>
                     </connections>
                 </viewController>
@@ -82,7 +84,7 @@
                 <viewController id="KkV-bJ-kZT" customClass="ETFieldViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="l3h-mh-8yE">
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="550"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="field.png" id="Cvq-Gt-KjH">
                                 <rect key="frame" x="0.0" y="0.0" width="1024" height="550"/>
@@ -265,7 +267,6 @@
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
                     <nil key="simulatedStatusBarMetrics"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
@@ -298,7 +299,7 @@
             </objects>
             <point key="canvasLocation" x="2248" y="99"/>
         </scene>
-        <!--Play View Controller - Play-->
+        <!--Play-->
         <scene sceneID="s2r-ah-HDs">
             <objects>
                 <viewController title="Play" id="f8O-tI-NYL" customClass="ETPlayViewController" sceneMemberID="viewController">
@@ -318,214 +319,12 @@
                                     <segue destination="KkV-bJ-kZT" kind="embed" identifier="SegueEditorToField" id="jgf-YN-L4f"/>
                                 </connections>
                             </containerView>
-                            <view clipsSubviews="YES" contentMode="scaleToFill" id="efk-Fb-Hye">
-                                <rect key="frame" x="-1024" y="23" width="1024" height="550"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="field.png" id="H9N-5Z-1oA">
-                                        <rect key="frame" x="0.0" y="0.0" width="1024" height="550"/>
-                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                    </imageView>
-                                    <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="selection-ring.png" id="NCj-jw-8m5">
-                                        <rect key="frame" x="66" y="381" width="79" height="79"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </imageView>
-                                    <view autoresizesSubviews="NO" opaque="NO" contentMode="scaleToFill" id="cQk-ZH-tbk" customClass="ETJuggerView">
-                                        <rect key="frame" x="225" y="382" width="79" height="79"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <subviews>
-                                            <imageView userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="templar-brown-left.png" id="B29-by-1N8">
-                                                <rect key="frame" x="13" y="11" width="44" height="44"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            </imageView>
-                                            <imageView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="florentine-righthand.png" id="gqN-cL-M64">
-                                                <rect key="frame" x="38" y="0.0" width="26" height="66"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            </imageView>
-                                        </subviews>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                    </view>
-                                    <view autoresizesSubviews="NO" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="rT0-ed-RTR" customClass="ETJuggerView">
-                                        <rect key="frame" x="225" y="78" width="79" height="79"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <subviews>
-                                            <imageView autoresizesSubviews="NO" opaque="NO" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="templar-brown-left.png" id="Rpj-4T-BHZ">
-                                                <rect key="frame" x="13" y="11" width="44" height="44"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            </imageView>
-                                            <imageView autoresizesSubviews="NO" opaque="NO" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="flail-righthand.png" id="B6M-ks-ZIT">
-                                                <rect key="frame" x="22" y="25" width="51" height="36"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            </imageView>
-                                        </subviews>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                    </view>
-                                    <view autoresizesSubviews="NO" opaque="NO" contentMode="scaleToFill" id="qVy-yw-ECu" customClass="ETJuggerView">
-                                        <rect key="frame" x="377" y="229" width="79" height="79"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <subviews>
-                                            <imageView userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="templar-brown-left.png" id="Dhl-BY-Qlc">
-                                                <rect key="frame" x="13" y="11" width="44" height="44"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            </imageView>
-                                        </subviews>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                    </view>
-                                    <view autoresizesSubviews="NO" opaque="NO" contentMode="scaleToFill" id="S4x-LL-WmY" customClass="ETJuggerView">
-                                        <rect key="frame" x="225" y="229" width="79" height="79"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <subviews>
-                                            <imageView opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="templar-brown-left.png" id="IsK-zR-CWh">
-                                                <rect key="frame" x="13" y="11" width="44" height="44"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            </imageView>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heavy-righthand.png" id="qWP-5v-2I7">
-                                                <rect key="frame" x="38" y="-4" width="41" height="73"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            </imageView>
-                                        </subviews>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                    </view>
-                                    <view autoresizesSubviews="NO" opaque="NO" contentMode="scaleToFill" id="IsU-Mi-0v0" customClass="ETJuggerView">
-                                        <rect key="frame" x="72" y="229" width="79" height="79"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <subviews>
-                                            <imageView userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="templar-brown-left.png" id="In7-z7-5Fb">
-                                                <rect key="frame" x="13" y="11" width="44" height="44"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            </imageView>
-                                            <imageView clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pole-righthand.png" id="HyX-bh-7a9">
-                                                <rect key="frame" x="17" y="-42" width="124" height="114"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            </imageView>
-                                        </subviews>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                    </view>
-                                    <view autoresizesSubviews="NO" opaque="NO" contentMode="scaleToFill" id="HUS-Pc-She" customClass="ETJuggerView">
-                                        <rect key="frame" x="872" y="229" width="79" height="79"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <subviews>
-                                            <imageView userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="templar-white-right.png" id="Q22-ax-TI5">
-                                                <rect key="frame" x="22" y="13" width="44" height="44"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            </imageView>
-                                            <imageView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pole-lefthand.png" id="pwU-jt-mZM">
-                                                <rect key="frame" x="-59" y="-36" width="124" height="114"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            </imageView>
-                                        </subviews>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                    </view>
-                                    <view autoresizesSubviews="NO" opaque="NO" contentMode="scaleToFill" id="GQN-3Z-6eW" customClass="ETJuggerView">
-                                        <rect key="frame" x="720" y="229" width="79" height="79"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <subviews>
-                                            <imageView userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="templar-white-right.png" id="1oP-p4-WK5">
-                                                <rect key="frame" x="22" y="13" width="44" height="44"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            </imageView>
-                                            <imageView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heavy-lefthand.png" id="FBk-c2-FeR">
-                                                <rect key="frame" x="1" y="-1" width="41" height="73"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            </imageView>
-                                        </subviews>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                    </view>
-                                    <view autoresizesSubviews="NO" opaque="NO" contentMode="scaleToFill" id="G4M-RI-wZJ" customClass="ETJuggerView">
-                                        <rect key="frame" x="720" y="383" width="79" height="79"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <subviews>
-                                            <imageView userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="templar-white-right.png" id="aft-N0-MMe">
-                                                <rect key="frame" x="22" y="13" width="44" height="44"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            </imageView>
-                                            <imageView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="flail-lefthand.png" id="kJT-j5-kkx">
-                                                <rect key="frame" x="0.0" y="25" width="51" height="36"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            </imageView>
-                                        </subviews>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                    </view>
-                                    <view autoresizesSubviews="NO" opaque="NO" contentMode="scaleToFill" id="Lyl-hM-VGc" customClass="ETJuggerView">
-                                        <rect key="frame" x="720" y="78" width="79" height="79"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <subviews>
-                                            <imageView userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="templar-white-right.png" id="gDV-GQ-uHD">
-                                                <rect key="frame" x="22" y="13" width="44" height="44"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            </imageView>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="florentine-lefthand.png" id="WMG-aQ-bkW">
-                                                <rect key="frame" x="14" y="3" width="26" height="66"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            </imageView>
-                                        </subviews>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                    </view>
-                                    <view autoresizesSubviews="NO" opaque="NO" contentMode="scaleToFill" id="8bE-wO-mmt" customClass="ETJuggerView">
-                                        <rect key="frame" x="568" y="229" width="79" height="79"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <subviews>
-                                            <imageView userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="templar-white-right.png" id="PIj-Dl-VVB">
-                                                <rect key="frame" x="22" y="13" width="44" height="44"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            </imageView>
-                                        </subviews>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                    </view>
-                                    <view contentMode="scaleToFill" id="0Sc-eq-qQi" customClass="ETJuggerView">
-                                        <rect key="frame" x="498" y="246" width="28" height="46"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dogskull.png" id="R88-1k-gKX">
-                                                <rect key="frame" x="0.0" y="0.0" width="28" height="46"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            </imageView>
-                                        </subviews>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                    </view>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="VnW-NV-093">
-                                        <rect key="frame" x="72" y="0.0" width="384" height="21"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="Palatino-Bold" family="Palatino" pointSize="17"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <nil key="highlightedColor"/>
-                                        <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <size key="shadowOffset" width="0.0" height="1"/>
-                                    </label>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Zr3-v4-4ow">
-                                        <rect key="frame" x="567" y="0.0" width="384" height="21"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="Palatino-Bold" family="Palatino" pointSize="17"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <nil key="highlightedColor"/>
-                                        <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <size key="shadowOffset" width="0.0" height="1"/>
-                                    </label>
-                                </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                            </view>
                         </subviews>
-                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Editor" image="185046 - design graphic tablet streamline tablet.png" id="jjW-dL-uQB"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <connections>
-                        <outlet property="field" destination="efk-Fb-Hye" id="shI-5o-gIw"/>
-                        <outlet property="fieldImageView" destination="H9N-5Z-1oA" id="Xw0-9D-QWF"/>
-                        <outlet property="selector" destination="NCj-jw-8m5" id="GgN-wW-sgs"/>
-                        <outlet property="teamA" destination="VnW-NV-093" id="CpR-rp-Im5"/>
-                        <outlet property="teamB" destination="Zr3-v4-4ow" id="cqU-YV-Akk"/>
-                        <outletCollection property="juggerViews" destination="cQk-ZH-tbk" id="dzA-r1-cNY"/>
-                        <outletCollection property="juggerViews" destination="rT0-ed-RTR" id="tAZ-xv-ypu"/>
-                        <outletCollection property="juggerViews" destination="qVy-yw-ECu" id="2WA-kN-BzE"/>
-                        <outletCollection property="juggerViews" destination="S4x-LL-WmY" id="Vgg-Sb-fvD"/>
-                        <outletCollection property="juggerViews" destination="IsU-Mi-0v0" id="Ctv-Cc-UzT"/>
-                        <outletCollection property="juggerViews" destination="HUS-Pc-She" id="tfS-fj-gRl"/>
-                        <outletCollection property="juggerViews" destination="GQN-3Z-6eW" id="jEf-wP-cb4"/>
-                        <outletCollection property="juggerViews" destination="G4M-RI-wZJ" id="1Y3-MI-h8G"/>
-                        <outletCollection property="juggerViews" destination="Lyl-hM-VGc" id="fa6-Tr-iAA"/>
-                        <outletCollection property="juggerViews" destination="8bE-wO-mmt" id="en7-yL-SdH"/>
-                        <outletCollection property="juggerViews" destination="0Sc-eq-qQi" id="4J6-PJ-LB2"/>
+                        <outlet property="containerView" destination="prf-f9-lny" id="WYe-dZ-lL8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wV9-qs-JmZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -553,7 +352,7 @@
             </objects>
             <point key="canvasLocation" x="24" y="1384"/>
         </scene>
-        <!--View Controller - Teams-->
+        <!--Teams-->
         <scene sceneID="CMf-Dv-lbU">
             <objects>
                 <viewController id="2wK-gl-WTk" sceneMemberID="viewController">
@@ -575,7 +374,6 @@
                             </containerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Teams" image="fluer-turtle-shield.png" id="lb4-bB-3VG"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
@@ -592,7 +390,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="984" height="698"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                         <sections>
                             <tableViewSection id="r0n-4v-shV">
                                 <cells>
@@ -906,21 +703,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VZD-ls-l31" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="icX-EG-ebR">
-            <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="9Kh-Gs-uKt" sceneMemberID="viewController">
-                    <view key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="tVK-7k-L1o">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <toolbarItems/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="1sS-fr-z8Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1624" y="-1398"/>
-        </scene>
     </scenes>
     <resources>
         <image name="185046 - design graphic tablet streamline tablet.png" width="32" height="32"/>
@@ -945,7 +727,10 @@
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
-        <simulatedScreenMetrics key="destination"/>
+        <simulatedScreenMetrics key="destination">
+            <size key="portraitSize" width="768" height="1024"/>
+            <size key="landscapeSize" width="1024" height="768"/>
+        </simulatedScreenMetrics>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
         <segue reference="jgf-YN-L4f"/>

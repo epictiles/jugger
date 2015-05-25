@@ -8,8 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
+@class  ETModelController;
+
 @interface ETRootViewController : UIViewController <UIPageViewControllerDelegate>
 
 @property (strong, nonatomic) UIPageViewController *pageViewController;
+@property (strong, nonatomic) ETModelController *modelController;
 
 @end

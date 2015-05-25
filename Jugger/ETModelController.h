@@ -12,6 +12,10 @@
 
 @interface ETModelController : NSObject <UIPageViewControllerDataSource>
 
+@property (nonatomic, readonly) NSArray* playbook;
+
+- (instancetype)initWithPlaybook:(NSArray*)playbook;
+
 - (ETDataViewController *)viewControllerAtIndex:(NSUInteger)index storyboard:(UIStoryboard *)storyboard;
 - (NSUInteger)indexOfViewController:(ETDataViewController *)viewController;
 

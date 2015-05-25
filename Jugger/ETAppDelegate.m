@@ -13,6 +13,8 @@
 #import "ETPlayViewController.h"
 #import "ETRootViewController.h"
 #import "ETDataViewController.h"
+#import "ETModelController.h"
+
 
 
 #define kLevelFileName @"defaults"
@@ -41,6 +43,11 @@
     
     // Playbook
     NSArray *rawPlaybookArray = [defaults valueForKey:@"Playbook"];
+    NSMutableArray* playbookArray = [NSMutableArray array];
+    for (NSDictionary* fieldDict in rawPlaybookArray) {
+        ETField* aField = [[ETField alloc] initWithDictionary:fieldDict];
+        [playbookArray addObject:aField];
+    }
     
     // Teams
     NSArray *rawTeamsArray = [defaults valueForKey:@"Teams"];
@@ -58,6 +65,9 @@
         UITabBarController* rootVC = (UITabBarController*)self.window.rootViewController;
         ETPlayViewController* playVC = (ETPlayViewController*)[[rootVC viewControllers] objectAtIndex:0];
         playVC.fieldModel = [[settings fields] objectAtIndex:0]; //TODO: Pull last viewed from defaults
+        
+        ETRootViewController* playbookVC = (ETRootViewController*)[[rootVC viewControllers] objectAtIndex:2];
+        playbookVC.modelController = [[ETModelController alloc] initWithPlaybook:(NSArray*)playbookArray];
         
     }
     

@@ -23,6 +23,7 @@
 @property (nonatomic) ETField* fieldModel;
 @property (nonatomic) IBOutletCollection(ETJuggerView) NSArray* juggerViews;
 @property (nonatomic) ETFieldViewController* fieldViewController;
+@property (nonatomic) IBOutlet UIView* containerView;
 
 
 - (IBAction)tapFighter:(UITapGestureRecognizer *)recognizer;

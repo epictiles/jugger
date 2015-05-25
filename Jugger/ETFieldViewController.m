@@ -61,11 +61,15 @@
 #pragma mark - Gesture Handling
 
 - (void)addGestureRecognizers {
-    for (UIView* view in self.field.subviews) {
+    NSLog(@"AddGestureRecognizers");
+    int counter = 0;
+    for (UIView* view in self.juggerViews) {
         if ([view isKindOfClass:[ETJuggerView class]]) {
             [self addGestureRecognizersToView:view];
+            counter++;
         }
     }
+    NSLog(@"%i instances",counter);
     UIRotationGestureRecognizer *rotateGesture = [[UIRotationGestureRecognizer alloc] initWithTarget:self action:@selector(rotateFighter:)];
     [self.view addGestureRecognizer:rotateGesture];
 }
@@ -157,6 +161,7 @@ static CGFloat _lastRotation = 0;
             jugger.boardSide = (index==0? BSRight : BSLeft);
             juggerView.jugger = jugger;
             [self.field addSubview:juggerView];
+            NSLog(@"%@ (position2: %@",jugger.name, NSStringFromCGPoint(juggerView.center));
             [juggerViews addObject:juggerView];
         }
         index++;
@@ -173,7 +178,9 @@ static CGFloat _lastRotation = 0;
 - (void) setFieldModel:(ETField *)fieldModel
 {
     _fieldModel = fieldModel;
-    [self modelUpdated];
+    if (self.view) {
+        [self modelUpdated];
+    }
 }
 
 

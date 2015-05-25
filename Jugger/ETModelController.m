@@ -25,11 +25,13 @@
 
 @implementation ETModelController
 
-- (id)init
+- (id)initWithPlaybook:(NSArray *)playbook
 {
     self = [super init];
     if (self) {
         // Create the data model.
+        _playbook = playbook;
+        
         NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
         _pageData = [[dateFormatter monthSymbols] copy];
     }
@@ -39,13 +41,13 @@
 - (ETDataViewController *)viewControllerAtIndex:(NSUInteger)index storyboard:(UIStoryboard *)storyboard
 {   
     // Return the data view controller for the given index.
-    if (([self.pageData count] == 0) || (index >= [self.pageData count])) {
+    if (([self.playbook count] == 0) || (index >= [self.playbook count])) {
         return nil;
     }
     
     // Create a new view controller and pass suitable data.
     ETDataViewController *dataViewController = [storyboard instantiateViewControllerWithIdentifier:@"ETDataViewController"];
-    dataViewController.dataObject = self.pageData[index];
+    dataViewController.dataObject = self.playbook[index];
     return dataViewController;
 }
 
@@ -53,7 +55,7 @@
 {   
      // Return the index of the given data view controller.
      // For simplicity, this implementation uses a static array of model objects and the view controller stores the model object; you can therefore use the model object to identify the index.
-    return [self.pageData indexOfObject:viewController.dataObject];
+    return [self.playbook indexOfObjectIdenticalTo:viewController.dataObject];
 }
 
 #pragma mark - Page View Controller Data Source
@@ -77,7 +79,7 @@
     }
     
     index++;
-    if (index == [self.pageData count]) {
+    if (index == [self.playbook count]) {
         return nil;
     }
     return [self viewControllerAtIndex:index storyboard:viewController.storyboard];

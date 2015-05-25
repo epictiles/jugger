@@ -7,6 +7,8 @@
 //
 
 #import "ETDataViewController.h"
+#import "ETFieldViewController.h"
+#import "ETField.h"
 
 @interface ETDataViewController ()
 
@@ -29,13 +31,26 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    self.dataLabel.text = [self.dataObject description];
+    self.dataLabel.text = [self.dataObject name];
+    
+    self.fieldViewController.fieldModel = self.dataObject;
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
     // Return YES for supported orientations
     return (UIInterfaceOrientationIsLandscape(interfaceOrientation));
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.identifier isEqualToString:@"SeguePlayBookToField"]) {
+        NSLog(@"Run Segue: SegueEditorToField");
+        self.fieldViewController = (ETFieldViewController*)segue.destinationViewController;
+        self.fieldViewController.view.frame = self.containerView.frame;
+        NSLog(@"field:%@ to container:%@",NSStringFromCGRect(self.fieldViewController.view.frame),
+              NSStringFromCGRect(self.containerView.frame));
+    }
 }
 
 @end

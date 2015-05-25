@@ -171,9 +171,9 @@ static CGFloat _lastRotation = 0;
 
 - (void) setFieldModel:(ETField *)fieldModel
 {
-    if (self.fieldViewController) {
-        self.fieldViewController.fieldModel = fieldModel;
-    }
+//    if (self.fieldViewController) {
+//        self.fieldViewController.fieldModel = fieldModel;
+//    }
     _fieldModel = fieldModel;
     
 //    _fieldModel = fieldModel;
@@ -183,8 +183,16 @@ static CGFloat _lastRotation = 0;
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     if ([segue.identifier isEqualToString:@"SegueEditorToField"]) {
+        NSLog(@"Run Segue: SegueEditorToField");
         self.fieldViewController = (ETFieldViewController*)segue.destinationViewController;
-        self.fieldViewController.fieldModel = _fieldModel;
+        self.fieldViewController.view.frame = self.containerView.frame;
+        
+        if (self.fieldViewController.fieldModel)
+            NSLog(@"Data already set");
+        else {
+            NSLog(@"Data not set, setting");
+            self.fieldViewController.fieldModel = _fieldModel;
+        }
     }
 }
 
